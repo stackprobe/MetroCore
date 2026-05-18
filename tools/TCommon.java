@@ -378,11 +378,11 @@ public final class TCommon {
     /**
      * 文字列を区切り文字で分割する。
      *
-     * @param str		 文字列
-     * @param delimiters  区切り文字の集合
+     * @param str 文字列
+     * @param delimiters 区切り文字の集合
      * @param meaningFlag 区切り文字(delimiters)以外を区切り文字とするか
      * @param ignoreEmpty 空文字列のトークンを除去するか
-     * @param limit	   最大トークン数(2～), -1 == 無制限
+     * @param limit 最大トークン数(2～), -1 == 無制限
      * @return トークン配列
      */
     public static List<String> tokenize(String str, String delimiters, boolean meaningFlag, boolean ignoreEmpty, int limit) {
@@ -484,7 +484,7 @@ public final class TCommon {
             }
 
             // コンソールにそのまま表示
-            pb.inheritIO();
+            //pb.inheritIO();
 
             // 同期実行
             pb.start().waitFor();
