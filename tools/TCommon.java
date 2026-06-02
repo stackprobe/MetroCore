@@ -231,14 +231,15 @@ public final class TCommon {
         Files.write(Paths.get(filePath), data);
     }
 
-    // テキスト全部書き出し（String）
+    // テキスト全部書き出し
     public static void writeAllText(String filePath, String text, Charset charset) throws IOException {
         writeAllBytes(filePath, text.getBytes(charset));
     }
 
     // 行単位で書き出し
     public static void writeAllLines(String filePath, List<String> lines, Charset charset) throws IOException {
-        Files.write(Paths.get(filePath), lines, charset);
+        writeAllText(filePath, linesToText(lines), charset);
+        //Files.write(Paths.get(filePath), lines, charset); // old -- 改行コードを制御できない。
     }
 
     public static int compare(int a, int b) {

@@ -57,14 +57,14 @@ public final class JsonTools {
     }
 
     public static Node load(String text) {
-        return new ReaderImpl(text).getNode();
+        return new Reader(text).getNode();
     }
 
-    private static class ReaderImpl {
+    private static class Reader {
         private final String text;
         private int index = 0;
 
-        public ReaderImpl(String text) {
+        public Reader(String text) {
             this.text = text;
         }
 
@@ -338,6 +338,12 @@ public final class JsonTools {
                     else if (chr == '\\') {
                         this.write("\\\\");
                     }
+                    /*
+                    else if (chr == '/') {
+                        //this.Write("\\/");
+                        this.write("\\u002F");
+                    }
+                    */
                     else if (chr == '\b') {
                         this.write("\\b");
                     }
