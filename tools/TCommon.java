@@ -500,4 +500,13 @@ public final class TCommon {
             }
         }
     }
+
+    private static CRandom _cRandom = null;
+
+    public static CRandom cRandom() {
+        if (_cRandom == null) {
+            _cRandom = new CRandom();
+        }
+        return _cRandom;
+    }
 }
