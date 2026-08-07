@@ -1,6 +1,30 @@
-# In case compiled files are generated
-*.class
+# Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
 
-# OS junk files
+.settings/
+.loadpath
+.recommenders/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# Build outputs
+target/
+build/
+out/
+
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
