@@ -485,7 +485,7 @@ public final class TCommon {
 			}
 
 			// コンソールにそのまま表示
-			//pb.inheritIO();
+			pb.inheritIO();
 
 			// 同期実行
 			pb.start().waitFor();

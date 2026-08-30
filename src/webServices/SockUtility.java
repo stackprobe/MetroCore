@@ -132,6 +132,7 @@ public class SockUtility {
 		if (path == null || !Files.exists(path)) {
 			return;
 		}
+
 		if (Files.isDirectory(path)) {
 			try (var stream = Files.walk(path)) {
 				for (Path p : stream.sorted((a, b) -> b.compareTo(a)).toList()) {
