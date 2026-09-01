@@ -26,6 +26,10 @@ public class CsvFileReader implements Closeable {
 		this(filePath, getFileEncoding(filePath));
 	}
 
+	public CsvFileReader(String filePath, char delimiter) throws IOException {
+		this(filePath, getFileEncoding(filePath), delimiter);
+	}
+
 	public CsvFileReader(String filePath, Charset encoding) throws IOException {
 		this(filePath, encoding, DELIMITER_COMMA);
 	}
@@ -125,6 +129,10 @@ public class CsvFileReader implements Closeable {
 
 	public static List<String[]> readToEnd(String filePath) throws IOException {
 		return readToEnd(filePath, getFileEncoding(filePath));
+	}
+
+	public static List<String[]> readToEnd(String filePath, char delimiter) throws IOException {
+		return readToEnd(filePath, getFileEncoding(filePath), delimiter);
 	}
 
 	public static List<String[]> readToEnd(String filePath, Charset encoding) throws IOException {
